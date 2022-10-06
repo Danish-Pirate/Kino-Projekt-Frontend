@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+<title>BookingSide</title>
+
+<link rel="stylesheet" href="..\css\BookingStyle.css">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- BookingJs local-->
+<script type="text/javascript" src="..\js\BookingJS.js" ></script>
+
+<script type="text/javascript" src="..\js\Infobox.js" ></script>
+
+<script type="text/javascript" src="..\js\Ticket.js" ></script>
+
+</head>
+<body onload="seatNumbering(), addData()">
+  <div class="cinema_screen"><h3 id="movie_name_head"></h3></div>
+<div class="main_container">
+
+    <div class="left_side_container" >
+        <div id="button-group">
+        <div class="cinema_one_grid" id="cinema_one_grid_id"> <!-- Insert cinema seats here--> </div>
+      </div>
+    </div>
+
+    <div class="right_side_container">
+
+        <div class="booking_infobox" id="booking_infobox_id">
+
+            <div class="infobox_grid_square" id="cinema_name_infobox_id"></div>
+            <div class="infobox_grid_square" id="movie_name_infobox_id"></div>
+            <div class="infobox_grid_square" id="date_infobox_id"></div>
+            <div class="infobox_grid_square" id="start_time_infobox_id"></div>
+            <div class="infobox_grid_square" id="age_infobox_id"></div>
+            <div class="infobox_grid_square" id="price_infobox_id"></div>
+    
+        </div>
+
+        <section class="registrationBox">
+            <div>
+                <form action="/createBooking" method="post">
+                    <ul class="flex-outer">
+                      <li>
+                        <label for="customer-name">Kunde navn :</label>
+                        <input type="text" id="customer-name" name="customerName" placeholder="Navn" required>
+                      </li>
+                      <li>
+                        <label for="phone">Tlf. nummer :</label>
+                        <input type="text" id="phone" name="phoneNumber" placeholder="Kundens tlf. nummer" required>
+                      </li>
+                      <div class="ticket" id="ticket_id"><!--kode tilhørende billetter-->
+
+                      </div>
+                      <div class="total_ticket_price" id="total_ticket_price">0 dkk</div>
+                      <input id="total_price_input_id" type="number" name="totalPrice" hidden>
+                      <input id="movie_name_input" type ="text" hidden>
+                      <input id="time_slot_input" type ="text" hidden>
+                      <input id="date_input" type ="text" hidden>
+                      <input id="cinema_name_input" type ="text" hidden>
+                      <li>
+                        <button id="submit_button" type="submit">Accepter!</button> 
+                      </li>
+                    </ul>
+                  </form>
+            </div>
+            </section>
+    </div>
+   
+
+</div>
+
+</body>
+</html>   
