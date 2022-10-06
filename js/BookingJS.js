@@ -40,7 +40,7 @@ function seatNumbering(){
         }else{
             seat_id++;
             seats = seats + '<seats class="cinema_one_seat_class" id="seat_id_' + seat_id +
-            '"  " onclick="getDataFromClick(this.id,'+ seatNum +','+ rowNum +');seatColorChange();handleTicket();updateTotalTicketPrice();"><img class="moviechair" src="../moviechair.png"></img></seats>'; /* ' + "sæde: " + seatNum+ ' */
+            '"  " onclick="getDataFromClick(this.id,'+ seatNum +','+ rowNum +');seatColorChange();handleTicket();updateTotalTicketPrice();"><img class="moviechair" src="../images/moviechair.png"></img></seats>'; /* ' + "sæde: " + seatNum+ ' */
             seatID.push("seat_id_" + seat_id);
             if(seatNum==12){
                 seatNum = 1;
