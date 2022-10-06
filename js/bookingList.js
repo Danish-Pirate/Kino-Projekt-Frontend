@@ -20,7 +20,7 @@
         })
         })
 
-        fetch("/bookings.json")
+        fetch("/json/bookings.json")
         .then(res => res.json())
         .then(data => {
             bookings = data.map(booking => {
