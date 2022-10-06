@@ -1,3 +1,6 @@
+body{
+    background-color: whitesmoke;
+}
 .main_box{
     display:flex;
     position: relative;
@@ -9,32 +12,38 @@
     width: 28em;
 }
 
+
 .snacks{
     text-align: center;
     background-color: white;
-    border: 5px solid rgb(199, 69, 69);
-    padding: 10px;
+    border: 5px solid red;
+    border-radius: 50%;
+    padding: 45px;
 }
 
 .cinema{
     text-align: center;
     background-color: white;
-    border: 5px solid rgb(199, 69, 69);
-    padding: 10px;
+    border: 5px solid red;
+    border-radius: 50%;
+    padding: 45px;
 }
 
 .duty_schedule{
     text-align: center;
     background-color: white;
-    border: 5px solid rgb(199, 69, 69);
-    padding: 10px;
+    border: 5px solid red;
+    border-radius: 50%;
+    padding: 45px;
 }
 #header{
     display: flex;
     justify-content: center;
+    
 }
 #name_header{
-    font-size: 75px;
+    font-size: 100px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: 2px 2px #ff0000;
+    text-shadow: 3px 3px red;
+    
 }
