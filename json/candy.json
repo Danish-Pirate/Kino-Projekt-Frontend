@@ -1,0 +1,25 @@
+[
+  {
+    "candyId": 1,
+    "candyName": "cola",
+    "candySize": "m",
+    "candyAmount": "1,5 L",
+    "candyPrice": 42,
+    "productLink": "https://usercontent.one/wp/www.papkrus.dk/wp-content/uploads/2017/08/coca-cola-sodavand-papkrus-40-cl-1200x1200.jpeg?media=1657901039"
+  },
+  {
+    "candyId": 1,
+    "candyName": "popcorn",
+    "candySize": "m",
+    "candyAmount": "1,5 L",
+    "candyPrice": 37,
+    "productLink": "https://bergdahlsfestbutik.dk/wp-content/uploads/2017/08/Popcornb%C3%A6gre-firkantet.jpg"
+  },
+  {
+    "candyId": 1,
+    "candyName": "slush ice",
+    "candySize": "m",
+    "candyAmount": "1,5 L",
+    "candyPrice": 42,
+    "productLink": "https://farmfun.dk/wp-content/uploads/2018/02/slush-ice.jpg"
+  }]

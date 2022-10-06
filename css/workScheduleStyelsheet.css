@@ -1,0 +1,29 @@
+html, body {
+    margin: 20px;
+    padding: 0;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#vagtCalendar {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.fc-view-harness {
+    background-color: white;
+    border: 2px solid black;
+    height: 738px !important;
+}
+
+.syg {
+    background-color: yellow;
+    
+}
+.syg .fc-event-main {
+    color: black;
+}
+
+.normal {
+    background-color: blue;
+}

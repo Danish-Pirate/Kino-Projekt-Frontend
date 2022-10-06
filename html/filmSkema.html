@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/filmListe.css">
+    <!-- Custom JS -->
+    <script type="text/javascript" src="/JS/FilmSchedule.js"></script>
+
+
+
+
+    <title>Skema</title>
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <img src="/images/kino-ikon.png" alt="logo" class="nav-logo">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/filmSkema.html">Film skema</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/movieListe.html">Film liste</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/candySite.html">Slik</a>
+            </li>
+        </ul>
+        <form class="d-flex">
+            <button class="btn btn-primary" type="button">Log ud</button>
+        </form>
+    </div>
+</nav>
+<!-- navbar end -->
+
+
+<!-- Main content -->
+<div class="container">
+
+    <div class="mt-5 d-flex justify-content-center">
+        <input id="datePicker" type="date"/>
+        <input class="mx-2" type="button" id="selectNewDate" value="Søg"/>
+    </div>
+
+
+
+
+    <div class="row">
+
+        <!-- Sal 1 col-->
+        <div class="col-6">
+            <h1 class="text-center">Sal 1</h1>
+
+            <div id="film-schedule-cards-hall1"></div>
+
+        </div>
+
+        <!-- Sal 2 col-->
+        <div class="col-6">
+            <h1 class="text-center">Sal 2</h1>
+
+            <div id="film-schedule-cards-hall2"></div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Main content end -->
+<!--
+     Card start
+     <div class="row bg-light border border-solid p-5 m-2">
+        <div class="col-6">
+            <h4>Scooby-doo</h4>
+            <img src="/images/Scooby.jpg" alt="Scooby-doo">
+        </div>
+        <div class="col-6">
+            <div class="py-5">
+                <button class="mb-2">08:00</button> <button>12:30</button>
+                <button class="mb-2">13:00</button> <button>14:30</button>
+                <button class="mb-2">15:00</button> <button>18:30</button>
+                <button class="mb-2">15:00</button> <button>18:30</button>
+            </div>
+            <div >
+                <h4>Pris: </h4>
+                <p>110 kr.</p>
+                <h4>Aldersgrænse: </h4>
+                <p>3 år</p>
+
+            </div>
+        </div>
+    </div>
+     Card End
+-->
+</body>
+
+</html>
