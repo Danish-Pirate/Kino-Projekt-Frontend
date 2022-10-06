@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "customerName":"Nanna Øland",
+        "phoneNumber": "22334455",
+        "date": "29-09-2022",
+        "timeSlot": "22:05",
+        "cinemaName": "Kino",
+        "movieName": "Sommeren '92",
+        "totalPrice": "70"
+    },
+    {
+        "id":2,
+        "customerName":"Søs Kjergaard",
+        "phoneNumber": "55443322",
+        "date": "29-09-2022",
+        "timeSlot": "22:05",
+        "cinemaName": "Kino",
+        "movieName": "Sommeren '92",
+        "totalPrice": "70"
+    },
+    {
+        "id":3,
+        "customerName":"Johanne Jensen",
+        "phoneNumber": "55667788",
+        "date": "29-09-2022",
+        "timeSlot": "22:05",
+        "cinemaName": "Kino",
+        "movieName": "Sommeren '92",
+        "totalPrice": "70"
+    }
+]
