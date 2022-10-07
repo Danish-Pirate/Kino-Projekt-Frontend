@@ -46,7 +46,7 @@ class FilmsScheduleRenderer {
 
     //Fetch data from Film
     async fetchDataFromFilms() {
-        let responseFilms = await fetch(this.endpointUrlFilms, { method: 'GET', headers: { token: "5566"}});
+        let responseFilms = await fetch(this.endpointUrlFilmsSchedule, { method: 'GET', headers: { token: "5566"}});
         this.dataScheduleFilm = await responseFilms.json();
         this.updateUI();
     }
