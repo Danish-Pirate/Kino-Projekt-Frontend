@@ -18,7 +18,7 @@ $(document).ready(function () {
             data: JSON.stringify(formData),
             dataType: "json",
             encode: true,
-            headers: { "Content-Type": "application/json;charset=UTF-8", "token": "5566"}
+            headers: { "Content-Type": "application/json;charset=UTF-8", token: "5566"}
         }).done(function (data) {
             console.log(data);
         });
@@ -31,7 +31,7 @@ $(document).ready(function () {
 async function deleteFilm(movieId) {
     await fetch('https://hiazure.azurewebsites.net/deleteFilm/' + movieId, {
         method: 'DELETE',
-        headers: { "Content-Type": "application/json;charset=UTF-8", "token": "5566"}
+        headers: { "Content-Type": "application/json;charset=UTF-8", token: "5566"}
     })
     refreshPage();
 
@@ -55,7 +55,7 @@ async function updateFilm(id) {
         data: JSON.stringify(formDataEdit),
         dataType: "json",
         encode: true,
-        headers: { "Content-Type": "application/json;charset=UTF-8", "token": "5566" }
+        headers: { "Content-Type": "application/json;charset=UTF-8", token: "5566" }
     }).done(function (data) {
         console.log(data);
     });
