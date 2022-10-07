@@ -47,7 +47,7 @@
               <a class="nav-link" href="\html\ticketCalendar.html">Film kalender</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="\html\workSchedule.html">Film kalender</a>
+                <a class="nav-link" href="\html\workSchedule.html">Vagt kalender</a>
               </li>
               </ul>
         </div>
@@ -89,14 +89,13 @@ function addShow(){
     let formData = {
         date: $("#show-date").val(),
         time: $("#show-time").val(),
-        id: $("#show-film-id").val(),
     };
 
-    console.log(formData);
+    let id = $("#show-film-id").val();
 
     $.ajax({
         type: "POST",
-        url: "https://hiazure.azurewebsites.net/addShowToMovie/" + formData.id,
+        url: "https://hiazure.azurewebsites.net/addShowToMovie/" + id,
         data: JSON.stringify(formData),
         dataType: "json",
         encode: true,
