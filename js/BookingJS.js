@@ -1,7 +1,7 @@
 var currentMovieShow = {
     price : 100,
     cinemaName : 'Bio1',
-    movieName : 'Dødets Gab 7',
+    movieName : 'Dødens Gab 19',
     date : '22/10/20220',
     startTime : '14:15',
     ageRestriction : 13
