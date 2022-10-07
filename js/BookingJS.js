@@ -192,3 +192,8 @@ if($("#" + seatClickedID).css("background-color") != "rgb(255, 0, 0)"){
 
 
 }
+
+function redirect(){
+
+    window.location.href = "https://witty-hill-0dbba6903.2.azurestaticapps.net/index";
+}

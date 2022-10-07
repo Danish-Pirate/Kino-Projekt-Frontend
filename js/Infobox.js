@@ -70,3 +70,32 @@ var currentMovieShow = {
       document.getElementById('cinema_name_input').value = currentMovieShow.cinemaName;
   
       }
+/*
+  $(document).ready(function () {
+
+    $("#ticket_form").submit(function (event) {
+        let formData = {
+            customerName: $("#customer-name").val(),
+            phoneNumber: $("#phone").val(),
+            timeSlot: $("#time_slot_input").val(),
+            date: $("#date_input").val(),
+            cinemaName: $("#cinema_name_input").val(),
+            movieName: $("#movie_name_input").val(),
+            totalPrice: $("#total_price_input_id"),
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "https://hiazure.azurewebsites.net/createBooking",
+            data: JSON.stringify(formData),
+            dataType: "json",
+            encode: true,
+            headers: { "Content-Type": "application/json;charset=UTF-8", token: "5566"}
+        }).done(function (data) {
+            console.log(data);
+        });
+        event.preventDefault();
+    });
+
+});
+*/
