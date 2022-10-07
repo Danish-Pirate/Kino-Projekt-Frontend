@@ -28,7 +28,7 @@ $(document).ready( function() {
         //Updates UI with new film cards
         filmsScheduleRenderer.updateUI();
     });
-
+    
 
 });
 
@@ -82,8 +82,8 @@ class FilmsScheduleRenderer {
 
                 //confirms that the film has a show that is in hall 1 with the selected date
                 if(
-                    entryFilmSchedule.cinemaShows[i].cinemaHall.name == "Sal 1"
-                    &&
+                    /*entryFilmSchedule.cinemaShows[i].cinemaHall.name == "Sal 1"
+                    &&*/
                     entryFilmSchedule.cinemaShows[i].date == filmsScheduleDate
                     &&
                     isAlreadyOnTheList == 0
@@ -114,7 +114,7 @@ class FilmsScheduleRenderer {
                             <div class="py-5">`;
                 }
 
-                if(entryFilmSchedule.cinemaShows[i].cinemaHall.name == "Sal 1" && entryFilmSchedule.cinemaShows[i].date == filmsScheduleDate){
+                if(/*entryFilmSchedule.cinemaShows[i].cinemaHall.name == "Sal 1" && */ entryFilmSchedule.cinemaShows[i].date == filmsScheduleDate){
 
 
                     cardsHall1 +=
@@ -134,8 +134,9 @@ class FilmsScheduleRenderer {
                 //Adds cards to html
                 targetOne.append(cardsHall1);
             }
-
+/*
             //Checker to see if a hall have any film entries
+            
             filmEntriesChecker = false;
 
             let cardsHall2 = "";
@@ -195,6 +196,7 @@ class FilmsScheduleRenderer {
                 //Adds cards to html
                 targetTwo.append(cardsHall2);
             }
+            */
 
 
         }

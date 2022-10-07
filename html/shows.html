@@ -7,8 +7,8 @@
 
     <!-- CSS only Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href=
-            "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href=
+            "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
 
     <link rel="stylesheet" href=
             "https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -19,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/filmListe.css">
+    <link rel="stylesheet" href="\css\filmStyle.css">
 
 
 
@@ -30,21 +30,26 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-            <img src="/images/kino-ikon.png" alt="logo" class="nav-logo">
+            <a class="nav-link" href="\index.html">
+                <img src="/images/kino-ikon.png" alt="logo" class="nav-logo">
+              </a>
             <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/filmSkema.html">Film skema</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/movieListe.html">Film liste</a>
-              </li>
+                
                 <li class="nav-item">
-                    <a class="nav-link" href="/candySite.html">Slik</a>
+                  <a class="nav-link" href="\html\movieListe.html">Film liste</a>
                 </li>
-            </ul>
-            <form class="d-flex">
-              <button class="btn btn-primary" type="button">Log ud</button>
-            </form>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="\html\shows.html">Tilføj visning</a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="\html\ticketCalendar.html">Film kalender</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="\html\workSchedule.html">Film kalender</a>
+              </li>
+              </ul>
         </div>
       </nav>
 	<!-- navbar end -->
@@ -91,11 +96,11 @@ function addShow(){
 
     $.ajax({
         type: "POST",
-        url: "https://hiazure.azurewebsites.net/editMovie/" + formData.id,
+        url: "https://hiazure.azurewebsites.net/addShowToMovie/" + formData.id,
         data: JSON.stringify(formData),
         dataType: "json",
         encode: true,
-        headers: { "Content-Type": "application/json;charset=UTF-8", "token": "5566" }
+        headers: { "Content-Type": "application/json;charset=UTF-8", token: "5566" }
     }).done(function (data) {
         console.log(data);
     });
@@ -114,7 +119,7 @@ class FilmRendererForShows {
 
     //Fetch data from Film
     async fetchDataFromFilms() {
-        let responseFilms = await fetch(this.endpointUrlFilms, { method: 'GET', headers: { "token": "5566"}});;
+        let responseFilms = await fetch(this.endpointUrlFilms, { method: 'GET', headers: { token: "5566"}});;
         this.dataFilm = await responseFilms.json();
         this.updateUI();
     }
