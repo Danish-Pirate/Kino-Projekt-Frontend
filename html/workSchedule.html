@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- External css-->
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- External css-->
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="/css/workScheduleStyelsheet.css" rel="stylesheet">
 
-    <link href="workScheduleStyelsheet.css" rel="stylesheet">
+  <!-- External javascript-->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js"></script>
 
-    <!-- External javascript-->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js"></script>
-    <!-- <script src="assets/vendor/fullcalendar/lang-all.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
 
-    <script type="text/javascript" src="workSchedule.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="/js/workSchedule.js"></script>
 
 
 
 
-    <title>Calender UI</title>
+  <title>Calender UI</title>
 </head>
-<body style="background-color: #E6e6fa;">
-<div id="vagtCalendar"></div>
-<div id="editModal" class="modal" tabindex="-1">
+
+<body style="background-color: #9696d8;">
+  <div id="vagtCalendar"></div>
+  <div id="editModal" class="modal" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -38,43 +43,46 @@
         </div>
         <div class="modal-body">
           <form id="eventData">
-            <!-- <input type="text" name="title" />             -->
+            <input type="hidden" name="id" />
+
             <p>
-                Medarbejder:<br>
-                <label for="employe"></label>
-                <input type="text" id="title" placeholder="medarbejder" name="title" required/>
+              Medarbejder:<br>
+              <label for="employe"></label>
+              <input type="text" id="title" placeholder="medarbejder" name="title" required />
             </p>
-            <!-- <input type="datetime-local" name="start" /> -->
+
             <p>
-                Start for vagt:<br>
-                <label for="start"></label>
-                <input type="datetime-local" id="start" placeholder="Start for vagt" name="start" required/>
+              Start for vagt:<br>
+              <label for="start"></label>
+              <input type="datetime-local" id="start" placeholder="Start for vagt" name="start" required />
             </p>
-            <!-- <input type="datetime-local" name="end" /> -->
+
             <p>
-                Slut for vagt:<br>
-                <label for="end"></label>
-                <input type="datetime-local" id="end" placeholder="Slut for vagt" name="end" required/>
+              Slut for vagt:<br>
+              <label for="end"></label>
+              <input type="datetime-local" id="end" placeholder="Slut for vagt" name="end" required />
             </p>
             <p>
-               
-                <label for="type-select">Vælg type:</label>
-<br>
-                <select id="type-select" name="type">
-                    <option value="normal">Normal vagt</option>
-                    <option value="syg">Syg</option>
-                </select>
-                
+
+              <label for="type-select">Vælg type:</label>
+              <br>
+              <select id="type-select" name="type">
+                <option value="normal">Normal vagt</option>
+                <option value="syg">Syg</option>
+              </select>
+
             </p>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Luk</button>
+          <button type="button" class="btn btn-danger" id="delete">Slet</button>
           <button type="button" class="btn btn-primary" id="save">Gem</button>
         </div>
       </div>
     </div>
   </div>
-  
+
 </body>
+
 </html>
