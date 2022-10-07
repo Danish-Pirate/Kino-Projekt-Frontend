@@ -1,7 +1,7 @@
 .cinema_one_grid{
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto;
-  /*background-color: rgb(73, 62, 62);*/
+  background-color: rgb(73, 62, 62);
   gap: 5px;
   padding : 20px;
   margin: 5px;
