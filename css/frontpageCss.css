@@ -1,6 +1,9 @@
 body{
     background-color: whitesmoke;
+  
 }
+
+
 .main_box{
     display:flex;
     position: relative;
@@ -8,8 +11,8 @@ body{
     
 }
 .button_img{
-    height: 400px;
-    width: 28em;
+    height: 40vh;
+    width: 25vw;
 }
 
 
