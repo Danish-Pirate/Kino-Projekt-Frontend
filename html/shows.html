@@ -91,11 +91,11 @@ function addShow(){
 
     $.ajax({
         type: "POST",
-        url: "/editMovie/" + formData.id,
+        url: "https://hiazure.azurewebsites.net/editMovie/" + formData.id,
         data: JSON.stringify(formData),
         dataType: "json",
         encode: true,
-        headers: { "Content-Type": "application/json;charset=UTF-8" }
+        headers: { "Content-Type": "application/json;charset=UTF-8", "token": "5566" }
     }).done(function (data) {
         console.log(data);
     });
@@ -105,7 +105,7 @@ function addShow(){
     
 class FilmRendererForShows {
 
-    endpointUrlFilms = "/json/films.json";
+    endpointUrlFilms = "https://hiazure.azurewebsites.net/getAllMovie";
 
     constructor() {
         this.dataFilm = null;
@@ -114,9 +114,8 @@ class FilmRendererForShows {
 
     //Fetch data from Film
     async fetchDataFromFilms() {
-        let responseFilms = await fetch(this.endpointUrlFilms);
+        let responseFilms = await fetch(this.endpointUrlFilms, { method: 'GET', headers: { token: "5566"}});;
         this.dataFilm = await responseFilms.json();
-
         this.updateUI();
     }
 
@@ -130,7 +129,7 @@ class FilmRendererForShows {
         let target = $("#show-film-id");
 
 
-        let optionCards = `<option value="${entryFilm.id}">${entryFilm.name}</option>`;
+        let optionCards = `<option value="${entryFilm.movieId}">${entryFilm.name}</option>`;
 
         target.append(optionCards);
         }
