@@ -94,14 +94,13 @@ function addShow(){
     let formData = {
         date: $("#show-date").val(),
         time: $("#show-time").val(),
-        id: $("#show-film-id").val(),
     };
 
-    console.log(formData);
+    let id = $("#show-film-id").val();
 
     $.ajax({
         type: "POST",
-        url: "https://hiazure.azurewebsites.net/addShowToMovie/" + formData.id,
+        url: "https://hiazure.azurewebsites.net/addShowToMovie/" + id,
         data: JSON.stringify(formData),
         dataType: "json",
         encode: true,
