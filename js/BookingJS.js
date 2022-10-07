@@ -1,34 +1,17 @@
-const urlParams = new URLSearchParams(window.location.search);
-
-const paramPrice = urlParams.get('price');
-const paramMovieName = urlParams.get('movieName');
-const paramDate = urlParams.get('date');
-const paramAgeRestriction = urlParams.get('ageRestriction');
-const paramStartTime = urlParams.get('startTime');
-
-console.log(paramDate);
-
-var currentMovieShow = {
-    price : parseInt(paramPrice),
-    cinemaName : 'Bio1',
-    movieName : paramMovieName,
-    date : paramDate,
-    startTime : paramStartTime,
-    ageRestriction : paramAgeRestriction
-  };
-  
 const seatID = [];
 const seatColors = ['bookedColor'];
 var seatClickedID;
 var seatClickedName;
 var rowClicked;
 var ticketList = "";
-var ticketPrice = 0 + currentMovieShow.price;
+var ticketPrice;
 var currentTotalPrice = 0;
 var radioId;
 var firstP;
 
+
 console.log("nannas linje");
+
 // Laver gridden til sæderne.
 function seatNumbering(){
 
@@ -91,9 +74,12 @@ function calculateIndividualTicketPrice(id){
     }
 }
 
-
+function setTicketPrice(){
+    ticketPrice = currentMovieShow.price;
+}
 
 function handleTicket(){
+   
 
     if($("#" + seatClickedID).css("background-color") != "rgb(230, 230, 250)"){
         ticket = '<ticket added_ticket_id="ticket' + seatClickedID +'">' + " r: " + rowClicked +" s: " +seatClickedName +
