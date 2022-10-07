@@ -79,11 +79,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         $.ajax({
                             cache: false,
-                            url: 'http://localhost:8080/createSchedule',
+                            url: 'https://hiazure.azurewebsites.net/createSchedule',
                             method: 'POST',
                             data: JSON.stringify(event),
                             encode: true,
-                            headers: { "Content-Type": "application/json;charset=UTF-8" },
+                            headers: { "Content-Type": "application/json;charset=UTF-8", token: "5566" },
                             dataType: 'json',
                             success: function (data) {
                                 // Lader ikke til at virke her?
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         // event-data fra url der producerer json med events i (dokumentation: https://fullcalendar.io/docs/events-json-feed)
-        events: 'http://localhost:8080/showSchedule',
+        events: 'https://hiazure.azurewebsites.net/showSchedule',
         // Modtager et objekt eller et array af objekter, der består af:
         //String title; (medarbejders navn)
         //String start;
@@ -137,11 +137,11 @@ document.addEventListener('DOMContentLoaded', function () {
             $('#save').click(function () {
                 $.ajax({
                     cache: false,
-                    url: 'http://localhost:8080/editSchedule?id=' + info.event.id,
+                    url: 'https://hiazure.azurewebsites.net/editSchedule?id=' + info.event.id,
                     method: 'POST',
                     data: JSON.stringify(convertFormToJSON($("#eventData"))),
                     encode: true,
-                    headers: { "Content-Type": "application/json;charset=UTF-8" },
+                    headers: { "Content-Type": "application/json;charset=UTF-8", token: "5566"},
                     dataType: 'json',
                     success: function (data) {
                         modal.hide();
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
             $('#delete').click(function () {
                 $.ajax({
                     cache: false,
-                    url: 'http://localhost:8080/deleteSchedule?id=' + info.event.id,
+                    url: 'https://hiazure.azurewebsites.net/deleteSchedule?id=' + info.event.id,
                     method: 'POST',
                     success: function (data) {
                         modal.hide();
@@ -199,11 +199,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             $.ajax({
                 cache: false,
-                url: 'http://localhost:8080/createSchedule',
+                url: 'https://hiazure.azurewebsites.net/createSchedule',
                 method: 'POST',
                 data: JSON.stringify(event),
                 encode: true,
-                headers: { "Content-Type": "application/json;charset=UTF-8" },
+                headers: { "Content-Type": "application/json;charset=UTF-8", token: "5566" },
                 dataType: 'json',
                 success: function (data) {
                     modal.hide();
