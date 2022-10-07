@@ -96,11 +96,11 @@ function addShow(){
 
     $.ajax({
         type: "POST",
-        url: "https://hiazure.azurewebsites.net/editMovie/" + formData.id,
+        url: "https://hiazure.azurewebsites.net/addShowToMovie/" + formData.id,
         data: JSON.stringify(formData),
         dataType: "json",
         encode: true,
-        headers: { "Content-Type": "application/json;charset=UTF-8", "token": "5566" }
+        headers: { "Content-Type": "application/json;charset=UTF-8", token: "5566" }
     }).done(function (data) {
         console.log(data);
     });
@@ -119,7 +119,7 @@ class FilmRendererForShows {
 
     //Fetch data from Film
     async fetchDataFromFilms() {
-        let responseFilms = await fetch(this.endpointUrlFilms, { method: 'GET', headers: { "token": "5566"}});;
+        let responseFilms = await fetch(this.endpointUrlFilms, { method: 'GET', headers: { token: "5566"}});;
         this.dataFilm = await responseFilms.json();
         this.updateUI();
     }
