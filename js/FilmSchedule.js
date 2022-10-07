@@ -46,7 +46,7 @@ class FilmsScheduleRenderer {
 
     //Fetch data from Film
     async fetchDataFromFilms() {
-        let responseFilms = await fetch(this.endpointUrlFilms, { method: 'GET', headers: { token: "5566"}});
+        let responseFilms = await fetch(this.endpointUrlFilmsSchedule, { method: 'GET', headers: { token: "5566"}});
         this.dataScheduleFilm = await responseFilms.json();
         this.updateUI();
     }
@@ -78,13 +78,13 @@ class FilmsScheduleRenderer {
             let isAlreadyOnTheList = 0;
 
 
-            for (let i = 0; i < entryFilmSchedule.showList.length; i++) {
+            for (let i = 0; i < entryFilmSchedule.cinemaShows.length; i++) {
 
                 //confirms that the film has a show that is in hall 1 with the selected date
                 if(
-                    entryFilmSchedule.showList[i].cinemaHall.name == "Sal 1"
-                    &&
-                    entryFilmSchedule.showList[i].date == filmsScheduleDate
+                    /*entryFilmSchedule.cinemaShows[i].cinemaHall.name == "Sal 1"
+                    &&*/
+                    entryFilmSchedule.cinemaShows[i].date == filmsScheduleDate
                     &&
                     isAlreadyOnTheList == 0
                 ){
@@ -114,11 +114,11 @@ class FilmsScheduleRenderer {
                             <div class="py-5">`;
                 }
 
-                if(entryFilmSchedule.showList[i].cinemaHall.name == "Sal 1" && entryFilmSchedule.showList[i].date == filmsScheduleDate){
+                if(/*entryFilmSchedule.cinemaShows[i].cinemaHall.name == "Sal 1" && */ entryFilmSchedule.cinemaShows[i].date == filmsScheduleDate){
 
 
                     cardsHall1 +=
-                        `<button class="mb-2 mx-1"><a href="/html/BookingUI.html?price=${entryFilmSchedule.moviePrice}&movieName=${entryFilmSchedule.name}&date=${filmsScheduleDate}&startTime=${entryFilmSchedule.showList[i].time}&ageRestriction=${entryFilmSchedule.movieAgeRestriction}" >${entryFilmSchedule.showList[i].time}</a></button>`;
+                        `<button class="mb-2 mx-1"><a href="/html/BookingUI.html?price=${entryFilmSchedule.moviePrice}&movieName=${entryFilmSchedule.name}&date=${filmsScheduleDate}&startTime=${entryFilmSchedule.cinemaShows[i].time}&ageRestriction=${entryFilmSchedule.movieAgeRestriction}" >${entryFilmSchedule.cinemaShows[i].time}</a></button>`;
                 }
 
             }
@@ -134,21 +134,22 @@ class FilmsScheduleRenderer {
                 //Adds cards to html
                 targetOne.append(cardsHall1);
             }
-
+/*
             //Checker to see if a hall have any film entries
+            
             filmEntriesChecker = false;
 
             let cardsHall2 = "";
 
-            for (let i = 0; i < entryFilmSchedule.showList.length; i++) {
+            for (let i = 0; i < entryFilmSchedule.cinemaShows.length; i++) {
 
 
 
                 //confirms that the film has a show that is in hall 1 with the selected date
                 if(
-                    entryFilmSchedule.showList[i].cinemaHall.name == "Sal 2"
+                    entryFilmSchedule.cinemaShows[i].cinemaHall.name == "Sal 2"
                     &&
-                    entryFilmSchedule.showList[i].date == filmsScheduleDate
+                    entryFilmSchedule.cinemaShows[i].date == filmsScheduleDate
                     &&
                     isAlreadyOnTheList == 0
                 ){
@@ -178,10 +179,10 @@ class FilmsScheduleRenderer {
                           <div class="py-5">`;
                 }
 
-                if(entryFilmSchedule.showList[i].cinemaHall.name == "Sal 2" && entryFilmSchedule.showList[i].date == filmsScheduleDate){
+                if(entryFilmSchedule.cinemaShows[i].cinemaHall.name == "Sal 2" && entryFilmSchedule.cinemaShows[i].date == filmsScheduleDate){
 
                     cardsHall2 +=
-                        `<button class="mb-2 mx-1">${entryFilmSchedule.showList[i].time}</button>`;
+                        `<button class="mb-2 mx-1">${entryFilmSchedule.cinemaShows[i].time}</button>`;
                 }
 
             }
@@ -195,6 +196,7 @@ class FilmsScheduleRenderer {
                 //Adds cards to html
                 targetTwo.append(cardsHall2);
             }
+            */
 
 
         }
