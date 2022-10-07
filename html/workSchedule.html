@@ -28,8 +28,8 @@
   <script type="text/javascript" src="/js/workSchedule.js"></script>
 
 
-  <title>Calender UI</title>
- 
+  <title>Worker Calender UI</title>
+  <div class="container"></div>
 </head>
 
 <body class="lavenderBackground">
@@ -37,24 +37,29 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="\index.html">
+        <a class="nav-link" href="\index.html">
             <img src="/images/kino-ikon.png" alt="logo" class="nav-logo">
           </a>
-        <li class="nav-item">
-          <a class="nav-link" href="\html\filmSkema.html">Film skema</a>
+        <ul class="navbar-nav me-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="\html\movieListe.html">Film liste</a>
+            </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="\html\shows.html">Tilføj visning</a>
+          </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="\html\movieListe.html">Film liste</a>
+          <a class="nav-link" href="\html\ticketCalendar.html">Film kalender</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="\html\candySite.html">Slik</a>
-        </li>
-      </ul>
+            <a class="nav-link" href="\html\workSchedule.html">Vagt kalender</a>
+          </li>
+          </ul>
     </div>
   </nav>
-  <!-- navbar end -->
+<!-- navbar end -->
 
   <div id="vagtCalendar"></div>
   <div id="editModal" class="modal" tabindex="-1">

@@ -25,7 +25,7 @@
 
     <title>FIlm listing</title>
 </head>
-<body>
+<body class="lavenderBackground">
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -78,9 +78,13 @@
                     <button type="submit" class="btn btn-primary mt-3" onclick="addShow()">Tilføj</button>
                 </form>
 
+                
+                <div id="success"></div>
+                
             </div>
         </div>
     </div>
+
 
     <script>
 
@@ -104,6 +108,20 @@ function addShow(){
         console.log(data);
     });
     event.preventDefault();
+
+ 
+
+   let target = $("#success")
+
+   target.append(`<h1>Tilføjet!</h1>`);
+    
+   refreshPage();
+}
+
+function refreshPage() {
+
+setTimeout(() => window.location.reload(), 1000)
+
 }
 
     
