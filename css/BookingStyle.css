@@ -164,7 +164,10 @@
     }
     #movie_name_head{
       color: rgb(223, 171, 27);
-
+    }
+    .ticket_class{
+      color: rgb(124, 5, 79);
+      font-weight: bolder;
 
 
     }
