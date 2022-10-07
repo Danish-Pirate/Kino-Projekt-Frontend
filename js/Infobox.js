@@ -22,7 +22,7 @@ var currentMovieShow = {
       child: currentMovieShow.price * 0.5,
       pensioner: currentMovieShow.price * 0.7
   };
-  
+    
   function addData(){
   
       class movieShow{
@@ -70,4 +70,3 @@ var currentMovieShow = {
       document.getElementById('cinema_name_input').value = currentMovieShow.cinemaName;
   
       }
-  
