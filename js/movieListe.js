@@ -14,11 +14,11 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "/addMovie",
+            url: "https://hiazure.azurewebsites.net/addMovie",
             data: JSON.stringify(formData),
             dataType: "json",
             encode: true,
-            headers: { "Content-Type": "application/json;charset=UTF-8" }
+            headers: { "Content-Type": "application/json;charset=UTF-8", "token": "5566"}
         }).done(function (data) {
             console.log(data);
         });
@@ -29,8 +29,9 @@ $(document).ready(function () {
 
 
 async function deleteFilm(movieId) {
-    await fetch('/deleteFilm/' + movieId, {
-        method: 'DELETE'
+    await fetch('https://hiazure.azurewebsites.net/deleteFilm/' + movieId, {
+        method: 'DELETE',
+        headers: { "Content-Type": "application/json;charset=UTF-8", "token": "5566"}
     })
     refreshPage();
 
@@ -50,11 +51,11 @@ async function updateFilm(id) {
 
     $.ajax({
         type: "PUT",
-        url: "/editMovie/" + formDataEdit.movieId,
+        url: "https://hiazure.azurewebsites.net/editMovie/" + formDataEdit.movieId,
         data: JSON.stringify(formDataEdit),
         dataType: "json",
         encode: true,
-        headers: { "Content-Type": "application/json;charset=UTF-8" }
+        headers: { "Content-Type": "application/json;charset=UTF-8", "token": "5566" }
     }).done(function (data) {
         console.log(data);
     });
@@ -92,16 +93,15 @@ function showAccordion() {
 
 class FilmRenderer {
 
-    endpointUrlFilms = "/getAllMovie";
+    endpointUrlFilms = "https://hiazure.azurewebsites.net/getAllMovie";
 
     constructor() {
         this.dataFilm = null;
         this.fetchDataFromFilms();
     }
 
-    //Fetch data from Film
     async fetchDataFromFilms() {
-        let responseFilms = await fetch(this.endpointUrlFilms);
+        let responseFilms = await fetch(this.endpointUrlFilms, { method: 'GET', headers: { token: "5566"}});
         this.dataFilm = await responseFilms.json();
         this.updateUI();
     }

@@ -47,7 +47,7 @@
 
         <section class="registrationBox">
             <div>
-                <form action="/createBooking" method="post">
+                <form action="http://localhost:8080/createBooking" method="post">
                     <ul class="flex-outer">
                       <li>
                         <label for="customer-name">Kunde navn :</label>
@@ -62,10 +62,10 @@
                       </div>
                       <div class="total_ticket_price" id="total_ticket_price">0 dkk</div>
                       <input id="total_price_input_id" type="number" name="totalPrice" hidden>
-                      <input id="movie_name_input" type ="text" hidden>
-                      <input id="time_slot_input" type ="text" hidden>
-                      <input id="date_input" type ="text" hidden>
-                      <input id="cinema_name_input" type ="text" hidden>
+                      <input id="movie_name_input" type ="text" name="movieName" hidden>
+                      <input id="time_slot_input" type ="text" name="timeSlot" hidden>
+                      <input id="date_input" type ="text" name="date" hidden>
+                      <input id="cinema_name_input" type ="text" name="cinemaName" hidden>
                       <li>
                         <button id="submit_button" type="submit">Accepter!</button> 
                       </li>

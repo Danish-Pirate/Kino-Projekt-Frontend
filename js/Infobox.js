@@ -1,10 +1,20 @@
+const urlParams = new URLSearchParams(window.location.search);
+
+const paramPrice = urlParams.get('price');
+const paramMovieName = urlParams.get('movieName');
+const paramDate = urlParams.get('date');
+const paramAgeRestriction = urlParams.get('ageRestriction');
+const paramStartTime = urlParams.get('startTime');
+
+console.log(paramDate);
+
 var currentMovieShow = {
-    price : 100,
+    price : parseInt(paramPrice),
     cinemaName : 'Bio1',
-    movieName : 'Dødets Gab 7',
-    date : '22/10/20220',
-    startTime : '14:15',
-    ageRestriction : 13
+    movieName : paramMovieName,
+    date : paramDate,
+    startTime : paramStartTime,
+    ageRestriction : paramAgeRestriction
   };
   
   var calculatedPrice = {

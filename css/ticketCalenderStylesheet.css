@@ -15,6 +15,14 @@ html, body {
     border: 2px solid black;
 }
 
+.nav-logo {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    width: auto;
+    height: 70px;
+  }
+
 .lavenderBackground{
     background-color: #967bb6;
 }
