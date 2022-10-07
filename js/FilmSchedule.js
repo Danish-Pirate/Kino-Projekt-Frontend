@@ -28,7 +28,7 @@ $(document).ready( function() {
         //Updates UI with new film cards
         filmsScheduleRenderer.updateUI();
     });
-
+    
 
 });
 
