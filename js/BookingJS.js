@@ -99,9 +99,9 @@ function handleTicket(){
     if($("#" + seatClickedID).css("background-color") != "rgb(255, 0, 0)"){
 
         removeTicket = '<ticket added_ticket_id="ticket' + seatClickedID +'">' + " r: " + rowClicked +" s: " +seatClickedName +
-        '<label class="radio-inline"><input type="radio" onclick="calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="adult/' + seatClickedID +'" checked>V</label>' +
-        '<label class="radio-inline"><input type="radio" onclick="calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="child/' + seatClickedID +'">B</label><label class="radio-inline">' +
-        '<input type="radio" onclick="calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="pensioner/' + seatClickedID +'">P</label>'+ 
+        '<label class="radio-inline"><input type="radio" onclick="setPriceTagId(this.id);calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="adult' + seatClickedID +'" checked>V</label>' +
+        '<label class="radio-inline"><input type="radio" onclick="setPriceTagId(this.id);calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="child' + seatClickedID +'">B</label><label class="radio-inline">' +
+        '<input type="radio" onclick="setPriceTagId(this.id);calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="pensioner' + seatClickedID +'">P</label>'+ 
         '</ticket>'+ '<pricetag id="pricetag_id"> Pris: '+ (ticketPrice)+ " dkk"+'</pricetag><br>';
 
 
