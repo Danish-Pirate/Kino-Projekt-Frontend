@@ -115,11 +115,6 @@ class FilmRenderer {
             //sets target for JS
             let target = $("#film-cards");
 
-            /***
-             *
-
-            KUN TAGET UD IMENS MAN IKKE KAN OPRETTE VISNINGER. MÅ IKKE SLETTES!
-
             //Array for show dates
             let dateList = new Array();
 
@@ -134,8 +129,7 @@ class FilmRenderer {
             let sortedDateList = dateList.sort((a, b) => {
                 return new Date(a) - new Date(b)
             });
-             */
-
+             
 
             //First part of Film-Card
             var cards = `<div class="container mt-0 pt-0">
@@ -280,10 +274,6 @@ class FilmRenderer {
                               </tr></div>`;
 
 
-            /**
-             * KUN TAGET UD IMENS MAN IKKE KAN OPRETTE VISNINGER. MÅ IKKE SLETTES!
-
-
             //Loop for adding show times to dates for each film
             for (let i = 0; i < sortedDateList.length; i++) {
                 //Finds week day from date
@@ -320,7 +310,7 @@ class FilmRenderer {
                 cards += "</tr>";
 
             }
-             */
+             
 
             //Closing HTML
             cards += `</table></div></div></div>`;
