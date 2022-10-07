@@ -82,6 +82,10 @@
         </div>
     </div>
 
+    <div id="success">
+
+    </div>
+
     <script>
 
 function addShow(){
@@ -104,6 +108,19 @@ function addShow(){
         console.log(data);
     });
     event.preventDefault();
+
+    refreshPage();
+
+   let target = $("#success")
+
+   target.append(`<h1>Tilføjet! Visningen d. ${date} klokken ${time} er blevet tilføjet til filmen med id: ${id}</h1>`);
+    
+}
+
+function refreshPage() {
+
+setTimeout(() => window.location.reload(), 500)
+
 }
 
     
