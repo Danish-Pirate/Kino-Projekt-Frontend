@@ -8,6 +8,11 @@
   
 }
 
+.nav-logo{
+  width: auto;
+  height: 80px;
+}
+
 .row_class{
   padding: 5px;
   background-color: rgb(204, 8, 129);
