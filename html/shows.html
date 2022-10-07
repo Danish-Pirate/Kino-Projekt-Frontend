@@ -101,7 +101,7 @@ function addShow(){
 
     $.ajax({
         type: "POST",
-        url: "https://hiazure.azurewebsites.net/editMovie/" + formData.movieId,
+        url: "https://hiazure.azurewebsites.net/addShowToMovie/" + formData.movieId,
         data: JSON.stringify(formData),
         dataType: "json",
         encode: true,
