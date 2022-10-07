@@ -14,3 +14,11 @@ html, body {
     background-color: white;
     border: 2px solid black;
 }
+
+.nav-logo {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    width: auto;
+    height: 70px;
+  }
