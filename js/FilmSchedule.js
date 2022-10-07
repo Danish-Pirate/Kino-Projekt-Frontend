@@ -117,7 +117,7 @@ class FilmsScheduleRenderer {
                 if(entryFilmSchedule.showList[i].cinemaHall.name == "Sal 1" && entryFilmSchedule.showList[i].date == filmsScheduleDate){
 
                     cardsHall1 +=
-                        `<button class="mb-2 mx-1"><a href="/html/BookingUI.html?price=${entryFilmSchedule.moviePrice}&movieName=${entryFilmSchedule.name}&date=${entryFilmSchedule.showlist.date}&startTime=${entryFilmSchedule.time}&ageRestriction=${entryFilmSchedule.movieAgeRestriction}" >${entryFilmSchedule.showList[i].time}</a></button>`;
+                        `<button class="mb-2 mx-1"><a href="/html/BookingUI.html?price=${entryFilmSchedule.moviePrice}&movieName=${entryFilmSchedule.name}&date=${entryFilmSchedule.Date}&startTime=${entryFilmSchedule.time}&ageRestriction=${entryFilmSchedule.movieAgeRestriction}" >${entryFilmSchedule.showList[i].time}</a></button>`;
                 }
 
             }

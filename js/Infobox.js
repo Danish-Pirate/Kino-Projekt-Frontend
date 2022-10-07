@@ -6,6 +6,7 @@ const paramDate = urlParams.get('date');
 const paramAgeRestriction = urlParams.get('ageRestriction');
 const paramStartTime = urlParams.get('startTime');
 
+console.log(paramDate);
 
 var currentMovieShow = {
     price : parseInt(paramPrice),
