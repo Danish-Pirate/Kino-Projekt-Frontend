@@ -82,7 +82,7 @@ function handleTicket(){
    
 
     if($("#" + seatClickedID).css("background-color") != "rgb(230, 230, 250)"){
-        ticket = '<ticket added_ticket_id="ticket' + seatClickedID +'">' + " r: " + rowClicked +" s: " +seatClickedName +
+        ticket = '<ticket class="ticket_class" added_ticket_id="ticket' + seatClickedID +'">' + " R" + rowClicked +" S" +seatClickedName + " &nbsp&nbsp&nbsp&nbsp" +
         '<label class="radio-inline"><input type="radio" onclick="setPriceTagId(this.id);calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="adult' + seatClickedID +'" checked>V</label>' +
         '<label class="radio-inline"><input type="radio" onclick="setPriceTagId(this.id);calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="child' + seatClickedID +'">B</label><label class="radio-inline">' +
         '<input type="radio" onclick="setPriceTagId(this.id);calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="pensioner' + seatClickedID +'">P</label>'+ 
@@ -94,7 +94,7 @@ function handleTicket(){
 
     if($("#" + seatClickedID).css("background-color") != "rgb(255, 0, 0)"){
 
-        removeTicket = '<ticket added_ticket_id="ticket' + seatClickedID +'">' + " r: " + rowClicked +" s: " +seatClickedName +
+        removeTicket = '<ticket class="ticket_class" added_ticket_id="ticket' + seatClickedID +'">' + " R" + rowClicked +" S" +seatClickedName + " &nbsp&nbsp&nbsp&nbsp" +
         '<label class="radio-inline"><input type="radio" onclick="setPriceTagId(this.id);calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="adult' + seatClickedID +'" checked>V</label>' +
         '<label class="radio-inline"><input type="radio" onclick="setPriceTagId(this.id);calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="child' + seatClickedID +'">B</label><label class="radio-inline">' +
         '<input type="radio" onclick="setPriceTagId(this.id);calculateIndividualTicketPrice(this.id)" name="optradio' + seatClickedID +'" id="pensioner' + seatClickedID +'">P</label>'+ 
