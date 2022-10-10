@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    var calendarEl = document.getElementById('calendar');
+    var calendarEl = document.getElementById('ticketCalendar');
 
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   
         // event-data fra url der producerer json med events i (dokumentation: https://fullcalendar.io/docs/events-json-feed)
-        events: 'http://localhost:8080/testAfEndpoint',
+        events: 'https://hiazure.azurewebsites.net/getAllBooking',
         // Modtager et objekt eller et array af objekter, der består af:
         //String title;
         // String start;

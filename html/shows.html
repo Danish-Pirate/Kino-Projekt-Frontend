@@ -25,7 +25,7 @@
 
     <title>FIlm listing</title>
 </head>
-<body>
+<body class="lavenderBackground">
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -47,7 +47,7 @@
               <a class="nav-link" href="\html\ticketCalendar.html">Film kalender</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="\html\workSchedule.html">Film kalender</a>
+                <a class="nav-link" href="\html\workSchedule.html">Vagt kalender</a>
               </li>
               </ul>
         </div>
@@ -78,9 +78,13 @@
                     <button type="submit" class="btn btn-primary mt-3" onclick="addShow()">Tilføj</button>
                 </form>
 
+                
+                <div id="success"></div>
+                
             </div>
         </div>
     </div>
+
 
     <script>
 
@@ -89,14 +93,13 @@ function addShow(){
     let formData = {
         date: $("#show-date").val(),
         time: $("#show-time").val(),
-        id: $("#show-film-id").val(),
     };
 
-    console.log(formData);
+    let id = $("#show-film-id").val();
 
     $.ajax({
         type: "POST",
-        url: "https://hiazure.azurewebsites.net/addShowToMovie/" + formData.id,
+        url: "https://hiazure.azurewebsites.net/addShowToMovie/" + id,
         data: JSON.stringify(formData),
         dataType: "json",
         encode: true,
@@ -105,6 +108,20 @@ function addShow(){
         console.log(data);
     });
     event.preventDefault();
+
+ 
+
+   let target = $("#success")
+
+   target.append(`<h1>Tilføjet!</h1>`);
+    
+   refreshPage();
+}
+
+function refreshPage() {
+
+setTimeout(() => window.location.reload(), 1000)
+
 }
 
     

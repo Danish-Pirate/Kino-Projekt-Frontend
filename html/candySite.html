@@ -1,139 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS only Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href=
+            "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href=
+            "https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity=
+                  "sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+          crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    <script src=
+                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+    <script src=
+                    "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
     </script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    <script src=
+                    "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
     </script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/filmStyle.css">
+    <link rel="stylesheet" href="\css\filmStyle.css">
     <!-- Custom JS -->
     <script type="text/javascript" src="/JS/candySite.js"></script>
 
 
     <title>Slik</title>
 </head>
-
 <body>
 
-<!-- navbar -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="nav-link" href="\index.html">
-        <img src="/images/kino-ikon.png" alt="logo" class="nav-logo">
-      </a>
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="\html\filmSkema.html">Film skema</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="\html\candySite.html">Slik</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="\html\bookingList.html">Booking liste</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="\html\BookingUI.html">Film sal</a>
-      </li>
-    
-      </ul>
+    <body class="lavenderBackground">
+        <!--NAV BAR-->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+          <div class="container-fluid">
+      
+            <a class="nav-link" href="\index.html">
+              <img src="/images/kino-ikon.png" alt="logo" class="nav-logo">
+            </a>
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="\html\filmSkema.html">Film skema</a>
+                </li>
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="\html\candySite.html">Slik</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="\html\bookingList.html">Bookings</a>
+              </li>
+              
+              </ul>
+          </div>
+        </nav>
+        <!--NAV BAR END-->
+
+
+<!-- Main content -->
+
+<div class="navbar navbar-dark">
+
+    <h1>Liste af Slik</h1>
+
+</div>
+<!-- tilføj slik-->
+<div class="container p-5">
+    <div class="row justify-content-center">
+        <div class="col-sm-8 col-md-10 col-lg-4 item img-cards" data-bs-toggle="modal" data-bs-target="#modal-1">
+            <div class="d-flex justify-content-center mt-5"><button onclick="gallModal(this)" class="btn btn-primary">Tilføj slik</button></div>
+        </div>
     </div>
-  </nav>
-<!-- navbar end -->
+</div>
+
+<div class="modal bg-dark bg-opacity-75 fade" tabindex="-1" role="dialog" id="modal-1">
+    <div class="modal-dialog modal-dialog-centered modal-1g" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <form id="modal-candy" action="/addCandy" method="POST">
+                    <div id="name-group-candy" class="form-group">
+                        <label for="candyName">Name</label>
+                        <input
+                                type="text"
+                                class="form-control"
+                                id="candyName"
+                                name="candyName"
+                                placeholder="candyName"
+                        />
+                    </div>
+
+                    <div id="price-group-candy" class="form-group">
+                        <label for="candyPrice">Price</label>
+                        <input
+                                type="number"
+                                class="form-control"
+                                id="candyPrice"
+                                name="candyPrice"
+                                placeholder="candyPrice"
+                        />
+                    </div>
+
+                    <div id="size-group-candy" class="form-group">
+                        <label for="candySize">Size</label>
+                        <input
+                                type="text"
+                                class="form-control"
+                                id="candySize"
+                                name="candySize"
+                                placeholder="candySize"
+                        />
+                    </div>
+
+                    <div id="amount-group-candy" class="form-group">
+                        <label for="candyAmount">Amount</label>
+                        <input
+                                type="text"
+                                class="form-control"
+                                id="candyAmount"
+                                name="candyAmount"
+                                placeholder="candyAmount"
+                        />
+                    </div>
 
 
-    <!-- Main content -->
+                    <div id="productLink-group-candy" class="form-group">
+                        <label for="productLink">Link til billede</label>
+                        <input
+                                type="text"
+                                class="form-control"
+                                id="productLink"
+                                name="productLink"
+                                placeholder="product link"
+                        />
+                    </div>
 
-    <div class="navbar navbar-dark">
 
-        <h1>Liste af Slik</h1>
-
-    </div>
-    <!-- tilføj slik-->
-    <div class="container p-5">
-        <div class="row justify-content-center">
-            <div class="col-sm-8 col-md-10 col-lg-4 item img-cards" data-bs-toggle="modal" data-bs-target="#modal-1">
-                <div class="d-flex justify-content-center mt-5"><button onclick="gallModal(this)"
-                        class="btn btn-primary">Tilføj slik</button></div>
+                    <button type="submit" class="btn btn-success mt-2" data-bs-dismiss="modal" onclick="refreshPage()">
+                        Tilføj
+                    </button>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal" onclick="refreshPage()">Luk</button>
             </div>
         </div>
     </div>
-
-    <div class="modal bg-dark bg-opacity-75 fade" tabindex="-1" role="dialog" id="modal-1">
-        <div class="modal-dialog modal-dialog-centered modal-1g" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-
-                    <form id="modal-candy" action="/addCandy" method="POST">
-                        <div id="name-group-candy" class="form-group">
-                            <label for="candyName">Name</label>
-                            <input type="text" class="form-control" id="candyName" name="candyName"
-                                placeholder="candyName" />
-                        </div>
-
-                        <div id="price-group-candy" class="form-group">
-                            <label for="candyPrice">Price</label>
-                            <input type="number" class="form-control" id="candyPrice" name="candyPrice"
-                                placeholder="candyPrice" />
-                        </div>
-
-                        <div id="size-group-candy" class="form-group">
-                            <label for="candySize">Size</label>
-                            <input type="text" class="form-control" id="candySize" name="candySize"
-                                placeholder="candySize" />
-                        </div>
-
-                        <div id="amount-group-candy" class="form-group">
-                            <label for="candyAmount">Amount</label>
-                            <input type="text" class="form-control" id="candyAmount" name="candyAmount"
-                                placeholder="candyAmount" />
-                        </div>
-
-
-                        <div id="productLink-group-candy" class="form-group">
-                            <label for="productLink">Link til billede</label>
-                            <input type="text" class="form-control" id="productLink" name="productLink"
-                                placeholder="product link" />
-                        </div>
-
-
-                        <button type="submit" class="btn btn-success mt-2" data-bs-dismiss="modal"
-                            onclick="refreshPage()">
-                            Tilføj
-                        </button>
-                    </form>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal"
-                        onclick="refreshPage()">Luk</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="candy-cards"></div>
+</div>
+<div id="candy-cards"></div>
 </body>
-
 </html>

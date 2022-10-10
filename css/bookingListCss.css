@@ -1,3 +1,7 @@
+.lavenderBackground{
+  background-color: #967bb6;
+}
+
 .search-wrapper {
   display: flex;
   flex-direction: column;
@@ -37,7 +41,7 @@ input {
 
 .accordion {
   background-color: #eee;
-  /*color: #444;*/
+  color: #444;
   cursor: pointer;
   padding: 18px;
   width: 100%;

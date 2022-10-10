@@ -13,6 +13,7 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link href="\css\workScheduleStylesheet.css" rel="stylesheet">
 
+
   <!-- External javascript-->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -27,13 +28,39 @@
   <script type="text/javascript" src="/js/workSchedule.js"></script>
 
 
-  <title>Calender UI</title>
+  <title>Worker Calender UI</title>
+  <div class="container"></div>
 </head>
-<div>
-  <a class="nav-logo" href="\index.html">
-  <img src="/images/kino-ikon.png" alt="logo" class="nav-logo">
-</a></div>
+
 <body class="lavenderBackground">
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="nav-link" href="\index.html">
+            <img src="/images/kino-ikon.png" alt="logo" class="nav-logo">
+          </a>
+        <ul class="navbar-nav me-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="\html\movieListe.html">Film liste</a>
+            </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="\html\shows.html">Tilføj visning</a>
+          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="\html\ticketCalendar.html">Film kalender</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="\html\workSchedule.html">Vagt kalender</a>
+          </li>
+          </ul>
+    </div>
+  </nav>
+<!-- navbar end -->
+
   <div id="vagtCalendar"></div>
   <div id="editModal" class="modal" tabindex="-1">
     <div class="modal-dialog">
@@ -83,7 +110,7 @@
       </div>
     </div>
   </div>
-
+  </div>
 </body>
 
 </html>
