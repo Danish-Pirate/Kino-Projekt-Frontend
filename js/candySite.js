@@ -17,7 +17,7 @@ $(document).ready(function () {
             data: JSON.stringify(formData),
             dataType: "json",
             encode: true,
-            headers:{"Content-Type":"application/json;charset=UTF-8"}
+            headers:{"Content-Type":"application/json;charset=UTF-8", token: "5566"}
         }).done(function (data) {
             console.log(data);
         });
@@ -50,7 +50,7 @@ async function updateCandy(id){
         data: JSON.stringify(formDataEdit),
         dataType: "json",
         encode: true,
-        headers:{"Content-Type":"application/json;charset=UTF-8"}
+        headers:{"Content-Type":"application/json;charset=UTF-8", token: "5566"}
     }).done(function (data) {
         console.log(data);
     });
