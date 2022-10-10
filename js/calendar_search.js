@@ -3,7 +3,7 @@ class Calendar {
     }
 
     async getMoviesByShowingDate(showingDate) {
-        let getMoviesByDateURL = "http://localhost:8080/booking-search/showing_date?showingDate=" + showingDate;
+        let getMoviesByDateURL = "https://hiazure.azurewebsites.net/booking-search/showing_date?showingDate=" + showingDate;
         try {
             let res = await fetch(getMoviesByDateURL);
             return await res.json();
@@ -13,7 +13,7 @@ class Calendar {
     }
 
     async getMovieBookingStats(movieName, showingDate) {
-        let bookingListURL = "http://localhost:8080/booking-search/showing_date/movie_name?date=" + showingDate + "&name=" + movieName;
+        let bookingListURL = "https://hiazure.azurewebsites.net/booking-search/showing_date/movie_name?date=" + showingDate + "&name=" + movieName;
         try {
             let res = await fetch(bookingListURL);
             return await res.json();
