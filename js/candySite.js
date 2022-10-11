@@ -13,11 +13,11 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "/addCandy",
+            url: "https://hiazure.azurewebsites.net/addCandy",
             data: JSON.stringify(formData),
             dataType: "json",
             encode: true,
-            headers:{"Content-Type":"application/json;charset=UTF-8"}
+            headers: { "Content-Type": "application/json;charset=UTF-8", token: "5566" }
         }).done(function (data) {
             console.log(data);
         });
@@ -27,30 +27,30 @@ $(document).ready(function () {
 });
 
 async function deleteCandy(candyId) {
-    await fetch('/deleteCandy/' + candyId, {
+    await fetch('https://hiazure.azurewebsites.net/deleteCandy/' + candyId, {
         method: 'DELETE'
     })
     refreshPage();
 }
 
-async function updateCandy(id){
+async function updateCandy(id) {
 
     let formDataEdit = {
-        candyName: $("#editcandy-name"+id).val(),
-        candySize: $("#editcandy-size"+id).val(),
-        candyAmount: $("#editcandy-amount"+id).val(),
-        candyPrice: $("#editcandy-price"+id).val(),
-        productLink: $("#editcandy-productLink"+id).val(),
-        candyId: $("#editcandy-candyId"+id).val(),
+        candyName: $("#editcandy-name" + id).val(),
+        candySize: $("#editcandy-size" + id).val(),
+        candyAmount: $("#editcandy-amount" + id).val(),
+        candyPrice: $("#editcandy-price" + id).val(),
+        productLink: $("#editcandy-productLink" + id).val(),
+        candyId: $("#editcandy-candyId" + id).val(),
     };
 
     $.ajax({
         type: "PUT",
-        url: "/editCandy/"+formDataEdit.candyId,
+        url: "https://hiazure.azurewebsites.net/editCandy/" + formDataEdit.candyId,
         data: JSON.stringify(formDataEdit),
         dataType: "json",
         encode: true,
-        headers:{"Content-Type":"application/json;charset=UTF-8"}
+        headers: { "Content-Type": "application/json;charset=UTF-8", token: "5566" }
     }).done(function (data) {
         console.log(data);
     });
@@ -59,9 +59,9 @@ async function updateCandy(id){
     refreshPage();
 }
 
-function refreshPage(){
+function refreshPage() {
 
-    setTimeout(()=> window.location.reload(), 500)
+    setTimeout(() => window.location.reload(), 500)
 }
 
 
@@ -74,7 +74,7 @@ function gallModal(element) {
 
 class CandyRenderer {
 
-    endpointUrlCandy = "/getAllCandy";
+    endpointUrlCandy = "https://hiazure.azurewebsites.net/getAllCandy";
 
     constructor() {
         this.dataCandy = null;
@@ -97,7 +97,7 @@ class CandyRenderer {
             //sets target for JS
             let target = $("#candy-cards");
 
-                //First part of candy-Card
+            //First part of candy-Card
             var cards = `<div class="container my-3">
                       <div class="row border border-solid bg-light">
                           <div class="col-3 p-0">
