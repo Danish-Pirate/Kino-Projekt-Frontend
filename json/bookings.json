@@ -29,4 +29,14 @@
         "movieName": "Sommeren '92",
         "totalPrice": "70"
     }
+    {
+        "id":3,
+        "customerName":"Naomi Rasmussen",
+        "phoneNumber": "12345678",
+        "date": "10-10-2022",
+        "timeSlot": "22:00",
+        "cinemaName": "Kino",
+        "movieName": "Shrek",
+        "totalPrice": "105"
+    }
 ]
